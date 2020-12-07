@@ -6,9 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:18:28 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:20:16 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:39:29 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isdigit(int c)
 {

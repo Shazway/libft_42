@@ -6,11 +6,13 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:24:02 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 18:08:30 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strtrim(char const *s1, char const *set)
+#include "libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int beg;
 	int end;

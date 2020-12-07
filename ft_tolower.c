@@ -6,9 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:30:30 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:24:05 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:41:43 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_tolower(int c)
 {

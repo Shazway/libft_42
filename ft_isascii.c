@@ -6,9 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:21:23 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:19:53 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:39:28 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isascii(int c)
 {

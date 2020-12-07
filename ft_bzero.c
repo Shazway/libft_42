@@ -6,11 +6,13 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:14:13 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:19:24 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:46:14 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
 	int i;
 

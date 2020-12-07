@@ -6,11 +6,13 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 15:39:42 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:13:38 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:41:20 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_neg(char *str, int i)
+#include "libft.h"
+
+static int		ft_is_neg(char *str, int i)
 {
 	if (str[i] == '-')
 	{
@@ -29,7 +31,7 @@ int		ft_is_neg(char *str, int i)
 	return (1);
 }
 
-int		ft_atoi(cha *str)
+int				ft_atoi(char *str)
 {
 	int i;
 	int sign;

@@ -6,9 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 15:37:43 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:22:19 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:41:43 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_strlen(char *str)
 {

@@ -6,11 +6,13 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:35:19 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:24:01 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 18:11:53 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
 	int i;
 

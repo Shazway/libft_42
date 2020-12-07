@@ -6,9 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 16:03:18 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:19:36 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 17:39:28 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isalpha(int c)
 {

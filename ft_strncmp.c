@@ -6,11 +6,13 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:39:33 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:23:52 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 18:11:47 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		strncmp(const char *s1, const char *s2, size_t n)
+#include "libft.h"
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int i;
 
