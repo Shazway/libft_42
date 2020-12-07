@@ -6,11 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:20:09 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/11/30 17:00:52 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char    *ft_fill_array(long int n, char *dest, int count)
 {

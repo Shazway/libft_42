@@ -6,11 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 02:40:39 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:22:32 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/11/30 17:03:04 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 //IMPORTANT : TESTER LA MEMOIRE
 int		ft_count_words(char const *s, char c)
 {

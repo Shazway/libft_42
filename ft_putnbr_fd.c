@@ -6,11 +6,12 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:51:43 by telli             #+#    #+#             */
-/*   Updated: 2020/11/30 05:22:39 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/11/30 17:02:40 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+
 void ft_putchar_fd(char c, int fd)
 {
     write(1, &c, 1);
