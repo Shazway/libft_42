@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:34:19 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:46:34 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,8 @@ char	*ft_itoa(int n)
 	char *dest;
 	long int temp;
 
+	
 	temp = n;
-	dest = ft_allocate_array(temp, dest);
+	dest = ft_allocate_array(temp, NULL);
 	return (dest);
 }

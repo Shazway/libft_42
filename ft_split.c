@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 02:40:39 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:51:04 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:58:22 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_count_words(char const *s, char c)
 	return (count);
 }
 
-void	**ft_malloc_words(char const *s, char c, char **str, int count)
+void	ft_malloc_words(char const *s, char c, char **str, int count)
 {
 	int i;
 	int k;
@@ -50,7 +50,7 @@ void	**ft_malloc_words(char const *s, char c, char **str, int count)
 			i++;
 		}
 		if (!(str[k] = malloc(sizeof(char) * (j) + 1)))
-			return NULL;
+			return ;
 		k++;
 	}
 }
@@ -83,7 +83,6 @@ char	**ft_fill(char const *s, char c, char **str)
 char	**ft_split(char const *s, char c)
 {
 	char **str;
-	int i;
 	int count;
 
 	count = ft_count_words(s, c);

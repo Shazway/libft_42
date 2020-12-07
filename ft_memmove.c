@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:40:43 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:41:43 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:11:37 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *temp;
+	unsigned char temp[n];
 	unsigned char *cast_dest;
 	unsigned char *cast_src;
-	int i;
+	size_t i;
 
-	cast_dest = (unsigned char *dest);
-	cast_src = (unsigned char *src);
-	i = 0;
-	while(cast_src[++i])
+	cast_dest = (unsigned char *)dest;
+	cast_src = (unsigned char *)src;
+	i = -1;
+	while(cast_src[++i] && i < n)
 		temp[i] = cast_src[i];
 	temp[i] = '\0';
 	i = -1;

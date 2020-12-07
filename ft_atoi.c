@@ -6,26 +6,26 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 15:39:42 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:41:20 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:44:35 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_is_neg(char *str, int i)
+static int		ft_is_neg(char *str, int *i)
 {
-	if (str[i] == '-')
+	if (str[*i] == '-')
 	{
-		if (str[i + 1] == '-' || str[i + 1] == '+')
+		if (str[*i + 1] == '-' || str[*i + 1] == '+')
 			return (0);
-		i++;
-		return(-1)
+		(*i)++;
+		return(-1);
 	}
-	if (str[i] == '+')
+	if (str[*i] == '+')
 	{
-		if (str[i + 1] == '-' || str[i + 1] == '+')
+		if (str[*i + 1] == '-' || str[*i + 1] == '+')
 			return (0);
-		i++;
+		(*i)++;
 		return (1);
 	}
 	return (1);
@@ -35,10 +35,11 @@ int				ft_atoi(char *str)
 {
 	int i;
 	int sign;
+	int nb;
 
 	i = 0;
-	while (st[i] && str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
 		i++;
 	sign = ft_is_neg(str, &i);
 	if (str[i] < 0 || str[i] > 9)
