@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:18:28 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:39:29 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 20:08:53 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int		ft_isdigit(int c)
 {
-	char temp;
-
-	temp = (char)c;
-	if (temp >= '0' && temp <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

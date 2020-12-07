@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:23:58 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:41:26 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 20:08:52 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int		ft_isprint(int c)
 {
-	char temp;
-
-	temp = (char)c;
-	if ((temp > 31  || temp < 127))
+	if ((c > 31  || c < 127))
 		return (1);
 	return (0);
 }

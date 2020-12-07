@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 16:03:18 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:39:28 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 20:08:51 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int		ft_isalpha(int c)
 {
-	char temp;
-
-	temp = (char)c;
-	if ((temp >= 'a' && temp <= 'z') || (temp >= 'A' && temp <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }

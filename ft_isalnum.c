@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:19:29 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:39:27 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 20:08:51 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int		ft_isalnum(int c)
 {
-	char temp;
-
-	temp = (char)c;
-	if ((temp >= 'a' && temp <= 'z') 
-	|| (temp >= 'A' && temp <= 'Z')
-	|| (temp >= '0' && temp <= '9'))
+	if (ft_isalpha(c) || ft_isalnum(c))
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:30:30 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 17:41:43 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/07 20:09:53 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int		ft_tolower(int c)
 {
-	char temp;
-
-	temp = (char)c;
-	if (temp >= 'A' && temp <= 'Z')
-		return (temp + 32);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
 	return (c);
 }
