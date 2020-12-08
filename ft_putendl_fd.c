@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:47:45 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 20:02:07 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/08 17:07:44 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int i;
 
 	i = 0;
+	if (!s)
+		return NULL;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
