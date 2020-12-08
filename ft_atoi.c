@@ -6,11 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 20:07:46 by tmoragli          #+#    #+#             */
-/*   Updated: 2020/12/08 17:25:05 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/08 17:26:08 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_atoi(char *str)
 {
