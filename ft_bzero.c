@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:14:13 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 18:58:10 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/08 17:34:03 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	a = (unsigned char *)s;
 	i = 0;
-	while(s && i < n)
+	while(i < n)
 	{
 		a[i] = '\0';
 		i++;
