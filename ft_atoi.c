@@ -5,49 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/30 15:39:42 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:44:35 by tmoragli         ###   ########.fr       */
+/*   Created: 2020/08/09 20:07:46 by tmoragli          #+#    #+#             */
+/*   Updated: 2020/12/08 17:25:05 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-static int		ft_is_neg(char *str, int *i)
-{
-	if (str[*i] == '-')
-	{
-		if (str[*i + 1] == '-' || str[*i + 1] == '+')
-			return (0);
-		(*i)++;
-		return(-1);
-	}
-	if (str[*i] == '+')
-	{
-		if (str[*i + 1] == '-' || str[*i + 1] == '+')
-			return (0);
-		(*i)++;
-		return (1);
-	}
-	return (1);
-}
-
-int				ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
 	int i;
 	int sign;
 	int nb;
 
+	nb = 0;
+	sign = 1;
 	i = 0;
 	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
+			|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
 		i++;
-	sign = ft_is_neg(str, &i);
-	if (str[i] < 0 || str[i] > 9)
-		return (0);
-	nb = 0;
-	while (str[i] <= '9' && str[i] >= '0')
+	while (str[i] == '-' || str[i] == '+')
 	{
-		nb = nb * 10 + (str[i] - '0');
+		if (str[i] == '-')
+			sign = sign * -1;
+		i++;
+	}
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - 48);
 		i++;
 	}
 	return (nb * sign);
