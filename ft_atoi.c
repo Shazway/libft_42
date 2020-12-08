@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 20:07:46 by tmoragli          #+#    #+#             */
-/*   Updated: 2020/12/08 17:26:08 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/08 17:28:43 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(char *str)
 {
-	int i;
+	long int i;
 	int sign;
-	int nb;
+	long int nb;
 
 	nb = 0;
 	sign = 1;
@@ -35,5 +35,5 @@ int		ft_atoi(char *str)
 		nb = nb * 10 + (str[i] - 48);
 		i++;
 	}
-	return (nb * sign);
+	return ((int)(nb) * sign);
 }
