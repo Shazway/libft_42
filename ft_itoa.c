@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:46:34 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/08 16:25:14 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_fill_array(long int n, char *dest, int count)
 		n = n / 10;
 		count--;
 	}
-	dest[count] = n + 48;
+	dest[count] = (n % 10) + 48;
 	return (dest);
 }
 
@@ -76,7 +76,6 @@ char	*ft_itoa(int n)
 	char *dest;
 	long int temp;
 
-	
 	temp = n;
 	dest = ft_allocate_array(temp, NULL);
 	return (dest);
