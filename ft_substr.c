@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 12:55:33 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:53:04 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 20:02:33 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!(dest = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (i <= len)
+	while (i < len)
 	{
 		dest[i] = s[start];
 		i++;
