@@ -6,10 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 21:55:56 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 22:05:51 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 int		ft_isset(char const *set, char c)
@@ -33,9 +34,9 @@ int		ft_countchars(const char *set, const char *s1)
 
 	i = 0;
 	count = 0;
-	while(ft_isset(set, s1[i]) == 1 && s1[i] == 1)
+	while(s1 && ft_isset(set, s1[i]) == 1 && s1[i])
 		i++;
-	while(ft_isset(set, s1[i] && s1[i]) == 0)
+	while(s1 && ft_isset(set, s1[i]) == 0 && s1[i])
 	{
 		count++;
 		i++;
@@ -62,5 +63,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	dest[j] = '\0';
-	return ((char *)(dest));
+	return (dest);
 }
+/*
+int main(void)
+{
+	char *ret;
+	ret = ft_strtrim("adddbonjourddd", "ad");
+	printf("|%s|\n", ret);
+	free(ret);
+}*/
