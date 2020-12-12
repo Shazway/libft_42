@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 20:57:34 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 21:06:00 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isset(char const *set, char c)
 	return (0);
 }
 
-int		ft_countchars(int i, char *set, char *s1)
+int		ft_countchars(int i, const char *set, char *s1)
 {
 	int count;
 
@@ -47,7 +47,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int i;
 	int j;
 
-	if (!(dest = malloc(sizeof(char) * (ft_countchars(i, set, s1) + 1))))
+	if (!(dest = malloc(sizeof(char) * (ft_countchars(0, set, s1) + 1))))
 		return NULL;
 	i = 0;
 	j = 0;
