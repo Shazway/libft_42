@@ -6,11 +6,12 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 12:55:33 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 21:41:13 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 21:50:23 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -20,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return NULL;
-	if (start > len)
+	if (start >= ft_strlen(s))
 		len = 0;
 	if (!(dest = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
@@ -33,3 +34,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+int	main(void)
+{
+	printf("|%s|\n", ft_substr("012345", 10, 15));
+}*/
