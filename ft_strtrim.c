@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 21:06:00 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 21:06:44 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isset(char const *set, char c)
 	return (0);
 }
 
-int		ft_countchars(int i, const char *set, char *s1)
+int		ft_countchars(int i, const char *set, const char *s1)
 {
 	int count;
 
