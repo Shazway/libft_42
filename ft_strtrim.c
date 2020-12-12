@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 21:19:22 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 21:55:56 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ int		ft_isset(char const *set, char c)
 	return (0);
 }
 
-int		ft_countchars(int i, const char *set, const char *s1)
+int		ft_countchars(const char *set, const char *s1)
 {
 	int count;
+	int i;
 
+	i = 0;
 	count = 0;
 	while(ft_isset(set, s1[i]) == 1 && s1[i] == 1)
 		i++;
@@ -47,13 +49,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int i;
 	int j;
 
-	if (!(dest = malloc(sizeof(char) * (ft_countchars(0, set, s1) + 1))))
+	if (!(dest = malloc(sizeof(char) * (ft_countchars(set, s1) + 1))))
 		return NULL;
 	i = 0;
 	j = 0;
-	while (ft_isset(set, s1[i]))
+	while (ft_isset(set, s1[i]) == 1)
 		i++;
-	while (ft_isset(set, s1[i]))
+	while (ft_isset(set, s1[i]) == 0)
 	{
 		dest[j] = s1[i];
 		j++;
