@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 12:55:33 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 20:24:18 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 21:38:07 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return NULL;
 	if (start > len)
-		return NULL;
-	if (!(dest = malloc(sizeof(char) * (len + 1))))
+		start = len;
+	if (!(dest = malloc(sizeof(char) * ((len - start) + 1))))
 		return (NULL);
 	while (i < len)
 	{
