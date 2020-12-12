@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 21:06:44 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/12 21:19:22 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_countchars(int i, const char *set, const char *s1)
 	int count;
 
 	count = 0;
-	while(ft_isset(set, s1[i]) == 1 && s1[i])
+	while(ft_isset(set, s1[i]) == 1 && s1[i] == 1)
 		i++;
 	while(ft_isset(set, s1[i] && s1[i]) == 0)
 	{
