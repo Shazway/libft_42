@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:35:19 by telli             #+#    #+#             */
-/*   Updated: 2020/12/13 07:05:08 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/13 07:06:20 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strrchr(const char *s, int c)
 	while (--i > 0)
 		if (s[i] == c)
 			return ((char *)(&s[i]));
-	return (s);
+	return ((char *)(s));
 }
