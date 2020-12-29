@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:44:13 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 18:53:26 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 18:59:46 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,19 @@
 
 size_t	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t i;
+	size_t j;
 
-	j = 0;
 	i = 0;
-	while(dest[i])
+	while (dest[i] && i < n)
 		i++;
-	while (src[j] && j < size - 1)
+	j = i;
+	while (src[i - j] && i < n- 1)
 	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	i = 0;
-	while (src[i])
+		src[i] = src[i - j];
 		i++;
-	return (j + size);
+	}
+	if (j < n)
+		s1[i] = '\0';
+	return (j + ft_strlen(src));
 }
