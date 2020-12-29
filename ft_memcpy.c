@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:21:17 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 17:34:34 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 17:35:16 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (dest);
 	while (n)
 	{
-		*cast_dest++ = *cast_str++;
-		n--
+		*cast_dst++ = *cast_str++;
+		n--;
 	}
 	return (dest);
 }
