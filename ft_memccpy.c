@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:31:18 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 17:37:45 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 17:40:20 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	while (cast_src[i] && i < n)
 	{	
 		cast_dest[i] = cast_src[i];
-		if (cast_dest[i] == c)
+		if (cast_dest[i] == (unsigned char)c)
 			return(cast_dest + i + 1);
 		i++;
 	}
