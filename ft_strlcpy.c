@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 20:21:34 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 18:48:05 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 18:48:22 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	i = 0;
 	if (!dest || !src)
-		return (NULL);
+		return (0);
 	if (size > 0)
 	{
 		while (--size && src[i])
