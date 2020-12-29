@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:40:43 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 17:56:40 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 17:57:30 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while	(n > 0)
 		{
-			((char *)dest)[len - 1] = ((char *)src)[n - 1];
+			((char *)dest)[n - 1] = ((char *)src)[n - 1];
 			n--;
 		}
 	}
