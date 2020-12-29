@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 01:44:13 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 19:04:00 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 19:06:06 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		dest[i] = src[i - j];
 		i++;
 	}
-	if (j < n)
+	if (j < size)
 		dest[i] = '\0';
 	return (j + ft_strlen(src));
 }
