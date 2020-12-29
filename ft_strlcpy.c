@@ -6,15 +6,15 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 20:21:34 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 18:45:04 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 18:46:28 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	if (!dest || !src)
