@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:57:29 by telli             #+#    #+#             */
-/*   Updated: 2020/12/29 18:09:05 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 18:09:26 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
 	unsigned char *temp;
 
 	temp = (unsigned char *)s;
