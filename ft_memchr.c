@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 00:57:29 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:19:38 by tmoragli         ###   ########.fr       */
+/*   Updated: 2020/12/29 18:00:27 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char *temp;
 
 	temp = (unsigned char *)s;
-	i = -1;
-	while (temp[++i] && i < n)
+	i = 0;
+	while (temp[i] && i < n)
+	{
 		if (temp[i] == c)
 			return (temp + i);
+		i++;
+	}
 	return (NULL);
 }
