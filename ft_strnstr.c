@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 20:26:57 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:35:42 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/09 03:06:14 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,22 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	if (!(s2))
 		return ((char *)(s1));
-	i = -1;
-	while (s1[++i] && i < len)
+	i = 0;
+	j = 0;
+	while (s2[i])
 	{
-		j = 0;
-		while (s2[j++])
-			if (s1[i] == s2[j])
-				return ((char *)(s2));
+		if (s1[j] == s2[i])
+		{
+			while (s1[j] == s2[i] && s1[j] && s2[i])
+			{
+				j++;
+				i++;
+			}
+			if (s1[j] == '\0')
+				return ((char *)(s2 + i);
+			j = 0;
+		}
+		i++;
 	}
 	return (NULL);
 }
