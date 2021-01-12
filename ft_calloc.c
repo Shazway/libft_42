@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 21:00:56 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 20:08:49 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/12 03:45:05 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *str;
+	char	*str;
+	int		i;
 
-	if (!(str = malloc(size * (nmemb + 1))))
+	i = 0;
+	if (!(str = malloc(size * (nmemb))))
 		return (NULL);
+	while (i < nmemb * size)
+	{
+		str[i] = 0;
+		i++;
+	}
 	return (str);
 }
