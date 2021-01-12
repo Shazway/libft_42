@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2020/12/08 16:54:10 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/12 03:16:23 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_fill_array(long int n, char *dest, int count)
 
 char	*ft_allocate_array(long int n, char *dest)
 {
-	int count;
-	long int temp;
+	int			count;
+	long int	temp;
 
 	temp = n;
 	count = 1;
@@ -73,8 +73,8 @@ char	*ft_allocate_array(long int n, char *dest)
 
 char	*ft_itoa(int n)
 {
-	char *dest;
-	long int temp;
+	char		*dest;
+	long int	temp;
 
 	temp = n;
 	dest = NULL;

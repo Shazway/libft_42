@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:51:43 by telli             #+#    #+#             */
-/*   Updated: 2020/12/07 19:41:08 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/12 02:35:45 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if(n == -2147483648)
+	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', fd);
 		ft_putchar_fd('2', fd);
 		ft_putnbr_fd(147483648, fd);
 		return ;
 	} 
-	if(n < 0)
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
 		n = -n;

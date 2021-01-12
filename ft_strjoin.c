@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 13:22:35 by telli             #+#    #+#             */
-/*   Updated: 2020/12/08 17:22:01 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/12 02:37:34 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *dest;
-	int i;
-	int j;
+	char	*dest;
+	int		i;
+	int		j;
+
 	if (!s1 && !s2)
 		return NULL;
 	if (!s1)

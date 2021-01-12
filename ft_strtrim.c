@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 13:26:23 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 23:09:05 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/12 02:39:39 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	char *dest;
+	size_t	i;
+	char	*dest;
 
 	if (!s1 || !set)
 		return NULL;
@@ -27,5 +27,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (i && ft_strchr(set, s1[i]))
 		i--;
 	dest = ft_substr(s1, 0, i + 1);
-	return(dest);
+	return (dest);
 }

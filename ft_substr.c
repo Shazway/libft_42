@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 12:55:33 by telli             #+#    #+#             */
-/*   Updated: 2020/12/12 21:55:48 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/12 02:39:56 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *dest;
-	size_t i;
+	char	*dest;
+	size_t	i;
 	
 	i = 0;
 	if (!s)
