@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/06 21:00:56 by telli             #+#    #+#             */
-/*   Updated: 2021/01/12 03:47:03 by tmoragli         ###   ########.fr       */
+/*   Created: 2021/01/23 13:44:25 by tmoragli          #+#    #+#             */
+/*   Updated: 2021/01/23 13:47:52 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char		*str;
-	size_t		i;
-
-	i = 0;
-	if (!(str = malloc(size * (nmemb))))
-		return (NULL);
-	while (i < nmemb * size)
+	while (lst->next != NULL)
 	{
-		str[i] = 0;
-		i++;
+		if (lst->next == NULL)
+			return(lst);
+		lst = lst->next;
 	}
-	return (str);
+	return(lst);
 }
