@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:30:41 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:32:17 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,7 @@ char	*ft_allocate_array(long int n, char *dest)
 	if (!(dest = malloc(sizeof(char) * (count + 1))))
 		return (NULL);
 	dest[count] = '\0';
-	count--;
-	return (ft_fill_array(temp, dest, count));
+	return (ft_fill_array(temp, dest, count - 1));
 }
 
 char	*ft_itoa(int n)
