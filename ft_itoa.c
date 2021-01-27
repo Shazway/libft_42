@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:32:17 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:33:50 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,9 @@ char	*ft_allocate_array(long int n, char *dest)
 	temp = n;
 	count = 1;
 	if (n < 0)
-	{
 		count++;
+	if (n < 0)
 		n = n * -1;
-	}
 	if (n >= 0 && n <= 9)
 	{
 		if (!(dest = malloc(sizeof(char) * (count + 1))))
