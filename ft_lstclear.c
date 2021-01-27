@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 20:20:50 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 14:13:20 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:15:19 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (lst)
 	{
-		while ((*lst))
+		while (*lst)
 		{
 			tmp = (*lst)->next;
 			del(*lst);
@@ -26,4 +26,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 			*lst = tmp;
 		}
 	}
+	*lst = NULL;
 }
