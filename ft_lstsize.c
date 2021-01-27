@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 13:41:06 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 13:24:41 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:00:38 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_lstsize(t_list *lst)
 {
 	int i;
 
-	i = 0;
+	i = 1;
 	while (lst->next)
 	{
 		lst = lst->next;
