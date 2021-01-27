@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/23 13:41:06 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 13:10:30 by tmoragli         ###   ########.fr       */
+/*   Created: 2021/01/26 20:50:01 by tmoragli          #+#    #+#             */
+/*   Updated: 2021/01/27 13:11:19 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int i;
-
-	i = 0;
 	while (lst->next)
 	{
+		f(lst.content);
 		lst = lst->next;
-		i++;
 	}
-	return (i);
 }

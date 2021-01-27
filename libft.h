@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 01:10:22 by telli             #+#    #+#             */
-/*   Updated: 2021/01/23 13:57:52 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/26 19:42:58 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
-void ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstadd_back(t_list **alst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstadd_front(t_list **alst, t_list *new);
-int	ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 
 #endif

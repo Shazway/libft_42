@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/23 13:41:06 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 13:10:30 by tmoragli         ###   ########.fr       */
+/*   Created: 2021/01/26 20:20:50 by tmoragli          #+#    #+#             */
+/*   Updated: 2021/01/26 20:49:46 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int i;
+	t_list *tmp;
 
-	i = 0;
-	while (lst->next)
+	if (lst)
 	{
-		lst = lst->next;
-		i++;
+		while (*lst)
+		{
+			tmp = *lst->next;
+			del(*lst);
+			free(*lst);
+			*lst = tmp;
+		}
 	}
-	return (i);
 }

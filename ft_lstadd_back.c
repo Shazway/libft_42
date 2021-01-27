@@ -6,13 +6,21 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 13:48:22 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/23 13:50:16 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 13:10:27 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void ft_lstadd_back(t_list **alst, t_list *new)
 {
-	while (*alst->next != NULL)
-		*alst = *alst->next;
-	*alst->next = *new;
+	t_list	*last_elem;
+
+	if (!*alst)
+	{
+		*alst = new;
+		return ;
+	}
+	last_elem = ft_lstlast(*alst);
+	last_elem->next = new;
 }
