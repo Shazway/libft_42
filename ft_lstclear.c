@@ -6,9 +6,11 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 20:20:50 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/26 20:49:46 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 13:37:18 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
