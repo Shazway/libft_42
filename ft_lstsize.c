@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 13:41:06 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 14:03:55 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:04:49 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 		i++;
 	}
+	if (lst->next == NULL)
+		i++;
 	return (i);
 }
