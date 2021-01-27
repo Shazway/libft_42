@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 13:22:35 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:15:54 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:17:11 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_filldest(char const *s1, char const *s2, char *dest)
 {
-	i = 0;
-	while (s1[i])
+	int i;
+	int j;
+
+	j = 0;
+	while (s1[j])
 	{
-		dest[i] = s1[i];
-		i++;
+		dest[j] = s1[j];
+		j++;
 	}
-	j = i;
 	i = 0;
 	while (s2[i])
 	{
@@ -36,7 +38,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;
 	int		i;
-	int		j;
 
 	if (!s1 && !s2)
 		return (NULL);
