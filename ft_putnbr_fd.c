@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:51:43 by telli             #+#    #+#             */
-/*   Updated: 2021/01/12 02:35:45 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 15:52:54 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + '0', fd);
 	}
 }
-
