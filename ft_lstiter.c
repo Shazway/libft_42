@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 20:50:01 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 13:51:32 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:26:50 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst->next)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		f(lst->content);
+		f(lst);
 		lst = lst->next;
 	}
 }
