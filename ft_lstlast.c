@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 13:44:25 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 15:51:47 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 15:55:49 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ t_list	*ft_lstlast(t_list *lst)
 	if (lst)
 		while (lst->next)
 			lst = lst->next;
-	return(lst);
+	return (lst);
 }

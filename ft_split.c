@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 02:40:39 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 15:52:58 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:00:57 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int		ft_count_words(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] == c  && s[i])
+		while (s[i] == c && s[i])
 			i++;
 		if (s[i] != '\0')
 			count++;
-		while (s[i] != c  && s[i])
+		while (s[i] != c && s[i])
 			i++;
 	}
 	return (count);
@@ -42,9 +42,9 @@ void	ft_malloc_words(char const *s, char c, char **str, int count)
 	while (k < count)
 	{
 		j = 0;
-		while (s[i] == c  && s[i])
+		while (s[i] == c && s[i])
 			i++;
-		while (s[i] != c  && s[i])
+		while (s[i] != c && s[i])
 		{
 			j++;
 			i++;
@@ -66,7 +66,7 @@ char	**ft_fill(char const *s, char c, char **str)
 	while (str[k] && s[i])
 	{
 		j = 0;
-		while (s[i] == c )
+		while (s[i] == c)
 			i++;
 		while (s[i] != c)
 		{
@@ -86,10 +86,10 @@ char	**ft_split(char const *s, char c)
 	int		count;
 
 	if (!s)
-		return NULL;
+		return (NULL);
 	count = ft_count_words(s, c);
-	if (!(str = malloc(sizeof (char *) * (count + 1))))
-		return NULL;
+	if (!(str = malloc(sizeof(char *) * (count + 1))))
+		return (NULL);
 	str[count] = NULL;
 	ft_malloc_words(s, c, str, count);
 	return (ft_fill(s, c, str));

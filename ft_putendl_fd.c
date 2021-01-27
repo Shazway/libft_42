@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:47:45 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 15:52:53 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 15:57:00 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	write (fd, "\n", 1);
+	write(fd, "\n", 1);
 }
