@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 13:50:58 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 15:51:48 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:03:28 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst)
-		return;
+		return ;
 	if (del)
 		del(lst->content);
 	free(lst);
