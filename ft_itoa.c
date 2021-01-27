@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:07:49 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:22:54 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:23:55 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_fill_array(long int n, char *dest, int count)
 {
 	int i;
 
-	count--;
 	i = 0;
 	if (n < 0)
 	{
@@ -36,7 +35,6 @@ char	*ft_fill_array(long int n, char *dest, int count)
 		count--;
 	}
 	dest[count] = (n % 10) + 48;
-	dest[count] = '\0';
 	return (dest);
 }
 
@@ -67,7 +65,10 @@ char	*ft_allocate_array(long int n, char *dest)
 	}
 	if (!(dest = malloc(sizeof(char) * (count + 1))))
 		return (NULL);
-	return (ft_fill_array(temp, dest, count));
+	dest[count] = '\0';
+	count--;
+	dest = ft_fill_array(temp, dest, count);
+	return (dest);
 }
 
 char	*ft_itoa(int n)
