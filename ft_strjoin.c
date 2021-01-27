@@ -6,11 +6,31 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 13:22:35 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:12:52 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 16:15:54 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_filldest(char const *s1, char const *s2, char *dest)
+{
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	j = i;
+	i = 0;
+	while (s2[i])
+	{
+		dest[j] = s2[i];
+		j++;
+		i++;
+	}
+	dest[j] = '\0';
+	return (dest);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -27,17 +47,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = ft_strlen((void *)s1) + ft_strlen((void *)s2) + 1;
 	if (!(dest = malloc(sizeof(char) * (i))))
 		return (NULL);
-	i = 0;
-	while (s1[i++])
-		dest[i] = s1[i];
-	j = i;
-	i = 0;
-	while (s2[i])
-	{
-		dest[j] = s2[i];
-		j++;
-		i++;
-	}
-	dest[j] = '\0';
-	return (dest);
+	return (ft_filldest(s1, s2, dest));
 }
