@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 20:20:50 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 14:20:28 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/01/27 14:21:23 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *temp;
-	t_list *temp2
+	t_list *temp2;
 
 	temp2 = *lst;
 	while (temp2)
