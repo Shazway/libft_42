@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 01:10:22 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:37:02 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/02/11 22:45:47 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct		s_list
 
 char				*ft_strdup(const char *s);
 int					ft_atoi(char *str);
+void				*ft_calloc(size_t nmemb, size_t size);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
