@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 13:04:42 by tmoragli          #+#    #+#             */
-/*   Updated: 2021/01/27 15:52:36 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/02/12 18:20:32 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list *newelem;
 
-	if (!(newelem = malloc(sizeof(t_list *))))
+	if (!(newelem = (t_list *)malloc(sizeof(t_list))))
 		return (NULL);
 	newelem->next = NULL;
 	newelem->content = content;
