@@ -6,7 +6,7 @@
 /*   By: tmoragli <tmoragli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 02:40:39 by telli             #+#    #+#             */
-/*   Updated: 2021/01/27 16:00:57 by tmoragli         ###   ########.fr       */
+/*   Updated: 2021/02/12 18:06:06 by tmoragli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int		ft_count_words(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i] != '\0')
 			count++;
-		while (s[i] != c && s[i])
+		while (s[i] && s[i] != c)
 			i++;
 	}
 	return (count);
@@ -42,14 +42,14 @@ void	ft_malloc_words(char const *s, char c, char **str, int count)
 	while (k < count)
 	{
 		j = 0;
-		while (s[i] == c && s[i])
+		while (s[i] && s[i] == c)
 			i++;
-		while (s[i] != c && s[i])
+		while (s[i] && s[i] != c)
 		{
 			j++;
 			i++;
 		}
-		if (!(str[k] = malloc(sizeof(char) * (j) + 1)))
+		if (!(str[k] = malloc(sizeof(char) * (j + 1))))
 			return ;
 		k++;
 	}
@@ -63,12 +63,12 @@ char	**ft_fill(char const *s, char c, char **str)
 
 	i = 0;
 	k = 0;
-	while (str[k] && s[i])
+	while (s[i] && str[k])
 	{
 		j = 0;
-		while (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
-		while (s[i] != c)
+		while (s[i] && s[i] != c)
 		{
 			str[k][j] = s[i];
 			i++;
